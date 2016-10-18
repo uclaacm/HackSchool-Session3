@@ -12,7 +12,7 @@ const numTopOccurrences = 3;
  *		the error.
  *
  *	@param fname The file to read
- *	@return 	 A promise that reads the file
+ *	@return A promise that reads the file
  *
  *	See "MDN Javascript Promise" and "Node.js FS module" for more details
  */
@@ -38,10 +38,9 @@ function readFile(fname) {
  *	the number of times it has occurred.
  *		[ { word: '<word>', count: <count> }, ... ]
  *
- *	@param arr 	The array of objects to sort
- *	@return 	The sorted array
+ *	@param arr The array of objects to sort
+ *	@return The array sorted first by count, then alphabetically
  *
- *	It returns the array sorted first by count, then alphabetically.
  *	See "MDN Javascript Array Sort" for more details
  */
 function sortByCount(arr) {
@@ -63,7 +62,7 @@ function sortByCount(arr) {
  *		"<word> (<count>), <word> (<count>), ..."
  *
  *	@param occurrences An array of objects in the form above
- *	@return  The displayable string
+ *	@return The displayable string
  *
  *	It returns the displayable string.
  * 	See "MDN Javascript Array Join" for more details

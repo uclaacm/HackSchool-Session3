@@ -12,7 +12,7 @@ const numTopOccurrences = 3;
  *		the error.
  *
  *	@param fname The file to read
- *	@return 	 A promise that reads the file
+ *	@return A promise that reads the file
  *
  *	See "MDN Javascript Promise" and "Node.js FS module" for more details
  */
@@ -38,10 +38,9 @@ function readFile(fname) {
  *	the number of times it has occurred.
  *		[ { word: '<word>', count: <count> }, ... ]
  *
- *	@param arr 	The array of objects to sort
- *	@return 	The sorted array
+ *	@param arr The array of objects to sort
+ *	@return The array sorted first by count, then alphabetically
  *
- *	It returns the array sorted first by count, then alphabetically.
  *	See "MDN Javascript Array Sort" for more details
  */
 function sortByCount(arr) {
@@ -63,7 +62,7 @@ function sortByCount(arr) {
  *		"<word> (<count>), <word> (<count>), ..."
  *
  *	@param occurrences An array of objects in the form above
- *	@return  The displayable string
+ *	@return The displayable string
  *
  *	It returns the displayable string.
  * 	See "MDN Javascript Array Join" for more details
@@ -79,8 +78,8 @@ function printFormat(occurrences) {
  *	This function gets the total number of words in a file
  *	It sums up the number of words per line.
  *
- *  @param text An array of lines in the file
- *	@return 	The total number of words
+ *	@param text An array of lines in the file
+ *	@return The total number of words
  *
  * 	See "MDN Javascript Array Split" for more details
  */
@@ -94,9 +93,9 @@ function getTotalNumberOfWords(text) {
 /**
  *	This function gets the top `num' word occurrences in a file
  *
- *  @param text An array of lines in the file
+ *	@param text An array of lines in the file
  *	@param num 	The number of top occurrences to return
- *	@return 	The sorted top word occurrences
+ *	@return The sorted top word occurrences
  *
  * 	See "MDN Javascript Object", "MDN Javascript Array Push",
  *		"MDN Javascript Array Splice" for more details
@@ -125,9 +124,9 @@ function getTopWordOccurrences(text, num) {
 /**
  *	This function gets the misspelled words in a file based on a dictionary
  *
- *  @param text An array of lines in the file
+ *	@param text An array of lines in the file
  *	@param dict An array of words in the dictionary
- *	@return 	The misspelled words in the order they were found
+ *	@return The misspelled words in the order they were found
  *
  * 	See "MDN Javascript Array indexOf" for more details
  */
@@ -145,7 +144,7 @@ function getMisspelledWords(text, dict) {
  *	Prints the total number of words, the average number of words per line,
  *		the top occurring words, and the misspelled words in a file.
  *
- *  @param text An array of lines in the file
+ *	@param text An array of lines in the file
  *	@param dict An array of words in the dictionary
  *
  * 	See "MDN Javascript parseFloat" for more details
