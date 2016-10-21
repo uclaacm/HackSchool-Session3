@@ -2,7 +2,7 @@ const http = require('http');
 
 /**
  *  The function asynchronously fetches a random "secret" string using an http
- *  request. After it gets the response, it parses it to get the secret
+ *  request. After it gets the response, it parses it to get the secret.
  *  Once this function gets the secret, it calls the function passed as "callback"
  *  with its only argument being the secret.
  *
@@ -15,10 +15,9 @@ function getSecret(callback) {
 		path: '/api/gibberish/p-1/70-120'
 	}, (response) => {
 		let str = "";
-		// console.log(response);
+
 		response.on('data', (chunk) => {
 			str += chunk;
-			// console.log(chunk);
 		});
 
 		response.on('end', () => {
@@ -45,8 +44,8 @@ function getSecret(callback) {
  *      "combination pajama wallet hairy let a fridge light up"
  *
  *  To get the secret, you must call the `getSecret` function. You must pass it
- *  a callback that accepts one argument -- the secret, a randomly generated that
- *  will be passed to your callback. The callback you write will parse the
+ *  a callback that accepts one argument -- the secret, a randomly generated string
+ *  that will be passed to your callback. The callback you write will parse the
  *  "secret" it is passed and determine if it is "nice".
  *
  *  A secret is "nice" if all of the following are TRUE:
@@ -57,15 +56,15 @@ function getSecret(callback) {
  *  If these conditions are met, it should print out "The secret is NICE!"
  *  Otherwise it should print out the FIRST condition the secret did not meet.
  *
- *  You can, and should, write auxiliary (helper) functions.
+ *  You can, write auxiliary (helper) functions.
  *  You can use the Session 3's slides as reference.
  *  You can use code from Session 3's solution as a reference.
  *  You can also search the Mozilla Developer Network for JavaScript built-in
  *  functions and properties that might be useful, like split() or length.
  *
  *  Lastly, if you're having trouble, try putting some console.log() statements
- *  that print various things related to the problem you're having to see exactly
- *  what's going on. This will help you narrow down the problem.
+ *  that print various things in various places related to the problem you're having
+ *  to see exactly what's going on. This will help you narrow down the problem.
  *
  *  Here are some examples of how this function should behave:
  *
