@@ -4,17 +4,17 @@ const textFile = "file.txt";
 const numTopOccurrences = 3;
 
 /**
- *	Asynchronous function that reads a file.
- *	The returned promise attempts to read the file.
- *	If the read is successful, it calls the `fulfill' callback and passes an
- *		array of lines.
- *	If the read is unsuccessful, it calls the `reject' callback and passes
- *		the error.
+ *  Asynchronous function that reads a file.
+ *  The returned promise attempts to read the file.
+ *  If the read is successful, it calls the `fulfill' callback and passes an
+ *      array of lines.
+ *  If the read is unsuccessful, it calls the `reject' callback and passes
+ *      the error.
  *
- *	@param fname The file to read
- *	@return A promise that reads the file
+ *  @param fname The file to read
+ *  @return A promise that reads the file
  *
- *	See "MDN Javascript Promise" and "Node.js FS module" for more details
+ *  See "MDN Javascript Promise" and "Node.js FS module" for more details
  */
 function readFile(fname) {
 	return new Promise(
@@ -34,14 +34,14 @@ function readFile(fname) {
 }
 
 /**
- *	This function sorts an array of objects that associate a word and
- *	the number of times it has occurred.
- *		[ { word: '<word>', count: <count> }, ... ]
+ *  This function sorts an array of objects that associate a word and
+ *  the number of times it has occurred.
+ *      [ { word: '<word>', count: <count> }, ... ]
  *
- *	@param arr The array of objects to sort
- *	@return The array sorted first by count, then alphabetically
+ *  @param arr The array of objects to sort
+ *  @return The array sorted first by count, then alphabetically
  *
- *	See "MDN Javascript Array Sort" for more details
+ *  See "MDN Javascript Array Sort" for more details
  */
 function sortByCount(arr) {
 	arr.sort((a, b) => {
@@ -56,16 +56,16 @@ function sortByCount(arr) {
 }
 
 /**
- *	This function formats an array of objects in the form:
- *		[ { word: '<word>', count: <count> }, ... ]
- *	into a string that is displayable in the form:
- *		"<word> (<count>), <word> (<count>), ..."
+ *  This function formats an array of objects in the form:
+ *      [ { word: '<word>', count: <count> }, ... ]
+ *  into a string that is displayable in the form:
+ *      "<word> (<count>), <word> (<count>), ..."
  *
- *	@param occurrences An array of objects in the form above
- *	@return The displayable string
+ *  @param occurrences An array of objects in the form above
+ *  @return The displayable string
  *
- *	It returns the displayable string.
- * 	See "MDN Javascript Array Join" for more details
+ *  It returns the displayable string.
+ *  See "MDN Javascript Array Join" for more details
  */
 function printFormat(occurrences) {
 	let strs = [];
@@ -75,13 +75,13 @@ function printFormat(occurrences) {
 }
 
 /**
- *	This function gets the total number of words in a file
- *	It sums up the number of words per line.
+ *  This function gets the total number of words in a file
+ *  It sums up the number of words per line.
  *
- *	@param text An array of lines in the file
- *	@return The total number of words
+ *  @param text An array of lines in the file
+ *  @return The total number of words
  *
- * 	See "MDN Javascript Array Split" for more details
+ *  See "MDN Javascript Array Split" for more details
  */
 function getTotalNumberOfWords(text) {
 	let wordCount = 0;
@@ -91,14 +91,14 @@ function getTotalNumberOfWords(text) {
 }
 
 /**
- *	This function gets the top `num' word occurrences in a file
+ *  This function gets the top `num' word occurrences in a file
  *
- *	@param text An array of lines in the file
- *	@param num 	The number of top occurrences to return
- *	@return The sorted top word occurrences
+ *  @param text An array of lines in the file
+ *  @param num The number of top occurrences to return
+ *  @return The sorted top word occurrences
  *
- * 	See "MDN Javascript Object", "MDN Javascript Array Push",
- *		"MDN Javascript Array Splice" for more details
+ *  See "MDN Javascript Object", "MDN Javascript Array Push",
+ *    "MDN Javascript Array Splice" for more details
  */
 function getTopWordOccurrences(text, num) {
 	let wordMap = {};
@@ -122,13 +122,13 @@ function getTopWordOccurrences(text, num) {
 }
 
 /**
- *	This function gets the misspelled words in a file based on a dictionary
+ *  This function gets the misspelled words in a file based on a dictionary
  *
- *	@param text An array of lines in the file
- *	@param dict An array of words in the dictionary
- *	@return The misspelled words in the order they were found
+ *  @param text An array of lines in the file
+ *  @param dict An array of words in the dictionary
+ *  @return The misspelled words in the order they were found
  *
- * 	See "MDN Javascript Array indexOf" for more details
+ *  See "MDN Javascript Array indexOf" for more details
  */
 function getMisspelledWords(text, dict) {
 	let misspelledWords = [];
@@ -187,14 +187,14 @@ function getPalindromes(text) {
 }
 
 /**
- *	This function does the task that is required for the project.
- *	Prints the total number of words, the average number of words per line,
- *		the top occurring words, and the misspelled words in a file.
+ *  This function does the task that is required for the project.
+ *  Prints the total number of words, the average number of words per line,
+ *    the top occurring words, and the misspelled words in a file.
  *
- *	@param text An array of lines in the file
- *	@param dict An array of words in the dictionary
+ *  @param text An array of lines in the file
+ *  @param dict An array of words in the dictionary
  *
- * 	See "MDN Javascript parseFloat" for more details
+ *  See "MDN Javascript parseFloat" for more details
  */
 function processResults(text, dict) {
 	let totalWords = getTotalNumberOfWords(text);
