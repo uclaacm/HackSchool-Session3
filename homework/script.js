@@ -153,7 +153,7 @@ function forEachWord(text, fn) {
 }
 
 /**
- *  This function returns all words in text (an array of lines of a file) that
+ *  This function returns all words in `text` (an array of lines of a file) that
  *  are of length `length`. You can use the string length property, i.e.
  *     let str = "hello";
  *     console.log(str.length); // 5
